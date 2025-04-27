@@ -97,7 +97,7 @@ MongoDbSettings__Password
 This makes our application more secure, more flexible, and easier to deploy across different environments.
 
 Useful links:
-ASP.NET Core - Configuration Overview
+[ASP.NET Core - Configuration Overview](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-9.0)
 
 Environment Variables in ASP.NET Core
 
