@@ -18,7 +18,7 @@ We separate writes (commands) from reads (queries) to keep each side focused on 
 
 
 MediatR for in-process messaging:
-Controllers send commands/queries to MediatR instead of calling services directly. MediatR then invokes the matching handler. Details:[ MediatR on GitHub.](https://medium.com/@dnzcnyksl/mediator-pattern-in-c-109b691ff45b)
+Controllers send commands/queries to MediatR instead of calling services directly. MediatR then invokes the matching handler. Details:[ MediatR Pattern.](https://medium.com/@dnzcnyksl/mediator-pattern-in-c-109b691ff45b)
 .
 
 
