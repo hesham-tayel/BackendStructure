@@ -1,0 +1,14 @@
+@Fahem_HostAddress = http://localhost:8080
+
+### Create Order
+POST {{Fahem_HostAddress}}/api/orders
+Content-Type: application/json
+
+{
+  "price": 123.45,
+  "customerName": "Amr Essam",
+  "address": "123  el tagamo3 garden8, Cairo"
+}
+
+### 
+

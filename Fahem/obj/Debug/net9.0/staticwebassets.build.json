@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "Hash": "Rq/VmNYAlP6Rs7QTXaD3WPkwYrGnLYQEZNMa9Rai3/k=",
+  "Source": "Fahem",
+  "BasePath": "_content/Fahem",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Fahem\\wwwroot",
+      "Source": "Fahem",
+      "ContentRoot": "D:\\Fahem-Project\\Fahem-Backend\\Fahem\\wwwroot\\",
+      "BasePath": "_content/Fahem",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Fahem-Project\\Fahem-Backend\\Fahem\\wwwroot\\dummy.cs",
+      "SourceId": "Fahem",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Fahem-Project\\Fahem-Backend\\Fahem\\wwwroot\\",
+      "BasePath": "_content/Fahem",
+      "RelativePath": "dummy#[.{fingerprint}]?.cs",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0g43fzabz6",
+      "Integrity": "wItK04bCZb7LEipMu/129F47wfWHhcrQv8HVl+gKnJc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\dummy.cs"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "dummy.0g43fzabz6.cs",
+      "AssetFile": "D:\\Fahem-Project\\Fahem-Backend\\Fahem\\wwwroot\\dummy.cs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "72"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wItK04bCZb7LEipMu/129F47wfWHhcrQv8HVl+gKnJc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 19:13:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0g43fzabz6"
+        },
+        {
+          "Name": "label",
+          "Value": "dummy.cs"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wItK04bCZb7LEipMu/129F47wfWHhcrQv8HVl+gKnJc="
+        }
+      ]
+    },
+    {
+      "Route": "dummy.cs",
+      "AssetFile": "D:\\Fahem-Project\\Fahem-Backend\\Fahem\\wwwroot\\dummy.cs",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "72"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wItK04bCZb7LEipMu/129F47wfWHhcrQv8HVl+gKnJc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Apr 2025 19:13:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wItK04bCZb7LEipMu/129F47wfWHhcrQv8HVl+gKnJc="
+        }
+      ]
+    }
+  ]
+}
