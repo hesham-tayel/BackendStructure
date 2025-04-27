@@ -11,10 +11,14 @@ Authenticating and authorizing each request to enforce security policies.
 
 2. Architectural Patterns
 Command-Query Responsibility Segregation (CQRS):
-We separate writes (commands) from reads (queries) to keep each side focused on its job. Learn more: CQRS pattern overview.
+We separate writes (commands) from reads (queries) to keep each side focused on its job. Learn more: [CQRS pattern overview.
+](https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs)
+
+
+
 
 MediatR for in-process messaging:
-Controllers send commands/queries to MediatR instead of calling services directly. MediatR then invokes the matching handler. Details: MediatR on GitHub.
+Controllers send commands/queries to MediatR instead of calling services directly. MediatR then invokes the matching handler. Details:[ MediatR on GitHub.](https://medium.com/@dnzcnyksl/mediator-pattern-in-c-109b691ff45b)
 .
 
 
