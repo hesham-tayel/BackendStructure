@@ -70,7 +70,65 @@ This makes our application more secure, more flexible, and easier to deploy acro
 Useful links:
 [ASP.NET Core - Configuration Overview](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-9.0)
 
-Environment Variables in ASP.NET Core
+
+
+5. Program.cs and Dependency Injection
+The Program.cs file serves as the entry point of the application. It is responsible for:​
+
+Configuring services: Registering services like controllers, database contexts, and custom services using dependency injection.
+
+Setting up the middleware pipeline: Defining how HTTP requests are handled by configuring middleware components.
+
+Loading configurations: Reading settings from various sources such as appsettings.json, environment variables, and command-line arguments.​
+
+For a comprehensive guide on configuring Program.cs, refer to the official documentation: ASP.NET Core
+
+
+
+6. MongoDB Setup & Dependency Injection
+To keep our MongoDB integration clean, efficient, and secure, we follow these steps—no code snippets, just the concepts you’ll capture in your README:
+
+Connection Details in Configuration
+
+We store the connection string and database name in appsettings.json (and appsettings.Development.json for local testing).
+
+Any sensitive pieces (like the password) come from environment variables named with double-underscores (e.g. MongoDbSettings__Password), which override the JSON values at runtime.
+
+Binding Settings at Startup
+
+When the application starts, ASP .NET Core automatically reads the JSON files and environment variables, and binds them to a simple “settings” object.
+
+This gives us a single, strongly-typed place to grab our MongoDB connection details, without ever using new or hard-coding strings.
+
+Registering Core Services as Singletons
+We register three MongoDB-related services in the DI container—each as a singleton so there’s exactly one shared instance for the life of the app:
+
+MongoClient
+Acts as the gateway to your MongoDB server. It manages a pool of network connections under the hood, so you never pay the cost of reconnecting on every request.
+
+MongoDatabase
+Points at the specific database (e.g. Production). All your collections come from here. Since it’s cheap to retrieve from the client, we still keep it as a singleton for consistency.
+
+Generic “Key-Ring” Service
+Our IAtlasMongoRepository wraps the database and lets any part of the app say, “Give me the Orders collection,” or “Give me the Users collection,” without knowing the connection details.
+
+Why Singletons?
+
+Performance: One connection pool for everything, no repeated handshakes.
+
+Thread-Safety: The MongoDB driver’s client and database objects are designed to be safely shared across threads.
+
+Simplicity: Every controller, handler, or repository just asks the DI container for these services—no manual wiring or magic needed.
+
+With this setup, any repository or handler can simply declare, “I need the generic Mongo service” or “I need the database,” and the DI container hands it a fully-configured, ready-to-use MongoDB connection—securely configured, environment-aware, and highly efficient.
+
+
+
+
+
+
+
+
 
 
 
