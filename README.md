@@ -101,4 +101,89 @@ Learn more: [ASP.NET Core Dependency Injection](https://learn.microsoft.com/en-u
 
 ### 6.2 Feature-Specific Repositories  
 - Each domain model (e.g. `Order`, `User`) has its own interface, such as `IOrderMongoRepository`, defining operations like `InsertAsync`, `FindByIdAsync`.  
-- Implementations (e.g. `OrderMongoRepository`) obtain the correct collection via `IAtlasMongoRepository` and perform the actual database calls.  
+- Implementations (e.g. `OrderMongoRepository`) obtain the correct collection via `IAtlasMongoRepository` and perform the actual database calls.
+- 
+
+
+
+
+
+
+
+
+
+
+# Running the Fahem Backend Locally
+1. Prerequisites
+Ensure you have the following installed:
+
+Docker
+
+Docker Compose​
+
+2. Configure Environment Variables
+The application uses two environment files:​
+
+.env — for general environment variables.
+
+.secret — for sensitive information like connection strings and API keys.​
+
+Create both files in the project root directory.​
+
+
+# Set the environment to Development or Production
+ASPNETCORE_ENVIRONMENT=Development
+
+
+
+# Add your secrets here
+# For example:
+# DATABASE_CONNECTION_STRING=your_connection_string
+Note: Ensure that .secret is listed in your .gitignore file to prevent sensitive information from being committed to version control.​
+
+3. Build and Run the Application
+Use Docker Compose to build and run the application:​
+
+
+docker-compose up --build
+This command will:​
+
+Build the Docker image for the backend.
+
+Start the container and expose it on port 8080.​
+Reddit
+
+4. Access the Application
+Once the application is running, you can access it at:​
+
+
+http://localhost:8080
+
+5. Switching Environments
+To switch between Development and Production environments:​
+
+Open the .env file.
+
+Set the ASPNETCORE_ENVIRONMENT variable to either Development or Production:​
+
+
+ASPNETCORE_ENVIRONMENT=Production
+Save the file.
+
+Rebuild and restart the containers to apply the changes:​
+
+
+docker-compose down
+docker-compose up --build
+Note: Changing the ASPNETCORE_ENVIRONMENT variable allows the application to load the corresponding configuration files, such as appsettings.Development.json or appsettings.json. ​
+
+#6. Managing Secrets
+For secure management of sensitive information:​
+
+Store secrets in the .secret file.
+
+Ensure .secret is included in .gitignore to avoid committing it to version control.
+
+Access these secrets in your application through environment variables.​
+
+Tip: When using Docker Compose, environment variables defined in the .env and .secret files are automatically available to the application. 
