@@ -105,6 +105,7 @@ Learn more: [ASP.NET Core Dependency Injection](https://learn.microsoft.com/en-u
 - 
 
 
+---
 
 
 
@@ -112,16 +113,15 @@ Learn more: [ASP.NET Core Dependency Injection](https://learn.microsoft.com/en-u
 
 
 
-
-## Running the Fahem Backend Locally
-1. Prerequisites
+# Running the Fahem Backend Locally
+## 1. Prerequisites
 Ensure you have the following installed:
 
 Docker
 
 Docker Compose​
 
-2. Configure Environment Variables
+## 2. Configure Environment Variables
 The application uses two environment files:​
 
 .env — for general environment variables.
@@ -131,17 +131,17 @@ The application uses two environment files:​
 Create both files in the project root directory.​
 
 
-# Set the environment to Development or Production
+## Set the environment to Development or Production
 ASPNETCORE_ENVIRONMENT=Development
 
 
 
-# Add your secrets here
-# For example:
-# DATABASE_CONNECTION_STRING=your_connection_string
+ Add your secrets here
+ For example:
+ DATABASE_CONNECTION_STRING=your_connection_string
 Note: Ensure that .secret is listed in your .gitignore file to prevent sensitive information from being committed to version control.​
 
-3. Build and Run the Application
+## 3. Build and Run the Application
 Use Docker Compose to build and run the application:​
 
 
@@ -153,13 +153,13 @@ Build the Docker image for the backend.
 Start the container and expose it on port 8080.​
 Reddit
 
-4. Access the Application
+## 4. Access the Application
 Once the application is running, you can access it at:​
 
 
 http://localhost:8080
 
-5. Switching Environments
+## 5. Switching Environments
 To switch between Development and Production environments:​
 
 Open the .env file.
@@ -177,7 +177,7 @@ docker-compose down
 docker-compose up --build
 Note: Changing the ASPNETCORE_ENVIRONMENT variable allows the application to load the corresponding configuration files, such as appsettings.Development.json or appsettings.json. ​
 
-#6. Managing Secrets
+## 6. Managing Secrets
 For secure management of sensitive information:​
 
 Store secrets in the .secret file.
